@@ -1,0 +1,39 @@
+.btn {
+   background-color: #021d6d;
+   padding: 20px 90px;
+   color:white;
+   border:3px solid #264dc1;
+   cursor:pointer;
+   font-size: 18px;
+   font-weight: bold;
+}
+.btn:hover{
+    background: orange;
+}
+#buttonGroup{
+    text-align: center;
+}
+h1{
+    font-size: 4em;
+    text-align:center;
+    color: white;
+    border:3px solid #264dc1;
+    background-color: #021d6d;
+}
+#logo{
+    width:10;
+    height: 10;
+}
+#passwordPic{
+    padding: 50px;
+    float:left;
+}
+#indexText{
+    padding: 20px;
+    font-size: 3em;
+    color:white;
+}
+footer{
+    color:white;
+    text-align: center;
+}

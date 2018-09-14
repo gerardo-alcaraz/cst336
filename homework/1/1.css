@@ -10,8 +10,10 @@
 .btn:hover{
     background: orange;
 }
+
 #buttonGroup{
     text-align: center;
+    
 }
 h1{
     font-size: 4em;
@@ -25,15 +27,41 @@ h1{
     height: 10;
 }
 #passwordPic{
+    
     padding: 50px;
     float:left;
 }
+
 #indexText{
     padding: 20px;
     font-size: 3em;
-    color:white;
+    color:#021d6d;
 }
 footer{
-    color:white;
+    clear:both;
+    color:#021d6d;
     text-align: center;
+}
+#toonComp{
+    padding: 50px;
+    border-color:blue;
+    float:left;
+}
+#chooseRules{
+    padding:35px;
+    font-size: 2em;
+    color:#021d6d;
+}
+#choosePIC{
+    border: 10px solid #021d6d;
+}
+#dontRules{
+    color:#021d6d;
+    font-size: 2em;
+    float: left;
+}
+#stopImage{
+    width: 10px;
+    height: 10%;
+    float:right;
 }

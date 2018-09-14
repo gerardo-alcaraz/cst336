@@ -61,9 +61,8 @@ footer{
     float: left;
 }
 #stopImage{
-    width: 10px;
-    height: 10%;
     float:right;
+    padding: 10px;
 }
 body{
     background-color: #b8c4d8;

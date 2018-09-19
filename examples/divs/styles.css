@@ -1,0 +1,12 @@
+body{
+    font-size: 60px;
+}
+div{
+    border: 1px solid blue;
+    display: inline;
+    margin: 10px;
+}
+span{
+    border: 1px solid blue;
+    display: block;
+}

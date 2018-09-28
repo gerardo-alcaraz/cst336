@@ -1,0 +1,25 @@
+.system{
+    background-image: url("images/system.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+body, html{
+    height: 100%;
+    margin: 0;
+}
+#heading{
+    color: white;
+    text-align: center;
+    font-size: 32px;
+}
+#planets{
+    position: absolute;
+    height: 200px;
+    width: 400px;
+    margin: -100px;
+    top: 57%;
+    left: 20%;
+}

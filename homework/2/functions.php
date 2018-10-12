@@ -41,6 +41,5 @@ function show()
     displayPlanets($planets);
     
 }
-show();
 //<!--echo '<img src="images/1.png"/>';-->
 ?>

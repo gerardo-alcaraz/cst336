@@ -1,0 +1,40 @@
+.satisfactoryGroup{
+    text-align: center;
+    color: blue;
+}
+.checkboxgroup {
+  display: inline-block;
+  text-align: center;
+  width:200px;
+}
+.checkboxgroup label {
+  display: block;
+}
+.submitButton{
+    text-align: center;
+}
+.professorInput{
+    text-align: center;
+    font-weight: bold;
+    color: blue;
+}
+.studentInput{
+    text-align: center;
+    color: blue;
+}
+h1{
+    text-align: center;
+    color: blue;
+    font-weight: bold;
+}
+.classSelection{
+    text-align: center;
+    color: blue;
+}
+.takenClass{
+    text-align: center;
+}
+.Results{
+    text-align: center;
+    color: red;
+}

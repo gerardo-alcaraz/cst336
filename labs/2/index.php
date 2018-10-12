@@ -9,7 +9,7 @@ include 'inc/functions.php';
             @import url("css/styles.css");
         </style>
     </head>
-    <body>
+    <body background-<img src="background.jpg"></img>>
         <div id="main">
             <?php
                 play();

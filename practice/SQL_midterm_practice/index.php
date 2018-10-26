@@ -25,6 +25,7 @@
             }
             
         }
+        
         function descending()
         {
             $dbConn = getDatabaseConnection();
@@ -42,6 +43,7 @@
                 echo "<br>";
             }
         }
+        
         function leastPopulated()
         {
             $dbConn = getDatabaseConnection();

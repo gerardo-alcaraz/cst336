@@ -26,17 +26,6 @@
         font-size: 18px;
       }
       
-      
-      h2 {
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: 15px 0;
-        padding: 0 5px;
-        font-family: impact;
-        color: white;
-        text-shadow: 1px 1px black;
-      }
       .line1 {
          top: 0;
        }
@@ -61,7 +50,7 @@
     
     $arrayRecords = $records[array_rand($records)];
        $memeURL = $arrayRecords['meme_url'];
-       echo  '<div class="meme-div" style="background-image:url('. $memeURL .'); height:300px; width:200px;">'; 
+       echo  '<div class="meme-div test" style="background-image:url('. $memeURL .'); height:300px; width:200px;">'; 
        echo  '<h2 class="line1">' . $arrayRecords["line1"] . '</h2>'; 
        echo  '<h2 class="line2">' . $arrayRecords["line2"] . '</h2>'; 
        echo  '</div>';

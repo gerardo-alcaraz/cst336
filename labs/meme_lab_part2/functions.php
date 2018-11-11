@@ -31,8 +31,23 @@ function searchForMemes($userID = "") {
       $sql .= " AND (line1 LIKE '%{$_POST['search']}%' OR line2 LIKE '%{$_POST['search']}%')";
     } 
     
-    if(isset($_POST['meme-type-search']) && !empty($_POST['meme-type-search'])) {
-      $sql .= " AND meme_type = '{$_POST['meme-type-search']}'"; 
+    // if(isset($_POST['meme-type-search']) && !empty($_POST['meme-type-search'])) {
+    //   $sql .= " AND meme_type = '{$_POST['meme-type-search']}'"; 
+    // }
+    
+    if(isset($_POST['meme-type']) && !empty($_POST['meme-type']))
+    {
+      $sql .= " AND meme_type = '{$_POST['meme-type']}'"; 
+    }
+    
+    if(isset($_POST['order-by-date']))
+    {
+      $sql .= " ORDER BY create_date"; 
+    
+      if ($_POST['order-by-date'] == 'newest-first')
+      {
+        $sql .= " DESC"; 
+      }
     }
     
     $statement = $dbConn->prepare($sql); 

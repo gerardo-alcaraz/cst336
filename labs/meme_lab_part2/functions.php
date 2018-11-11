@@ -18,12 +18,12 @@ function searchForMemes($userID = "") {
     global $dbConn; 
     
     $sql = "SELECT
-        all_memes.id,
-        all_memes.line1, 
-        all_memes.line2, 
+        all_memes_part2.id,
+        all_memes_part2.line1, 
+        all_memes_part2.line2, 
         categories.meme_url 
-      FROM all_memes INNER JOIN categories 
-      ON all_memes.category_id = categories.category_id 
+      FROM all_memes_part2 INNER JOIN categories 
+      ON all_memes_part2.category_id = categories.category_id 
       WHERE 1"; 
     
     if(isset($_POST['search'])) {
@@ -91,7 +91,7 @@ function getCategoryID($memeType) {
 function insertMeme($line1, $line2, $categoryID) {
     global $dbConn; 
     
-    $sql = "INSERT INTO `all_memes` 
+    $sql = "INSERT INTO `all_memes_part2` 
       (`id`, `line1`, `line2`, `category_id`, `create_date`) 
       VALUES 
       (NULL, '$line1', '$line2', '$categoryID', NOW());"; 
@@ -111,14 +111,14 @@ function fetchMemeFromDB($memeID) {
     
   
   $sql = "SELECT
-      all_memes.id,
-      all_memes.line1, 
-      all_memes.line2, 
+      all_memes_part2.id,
+      all_memes_part2.line1, 
+      all_memes_part2.line2, 
       categories.meme_url,
       categories.meme_type
-    FROM all_memes INNER JOIN categories 
-    ON all_memes.category_id = categories.category_id 
-    WHERE all_memes.id = $memeID"; 
+    FROM all_memes_part2 INNER JOIN categories 
+    ON all_memes_part2.category_id = categories.category_id 
+    WHERE all_memes_part2.id = $memeID"; 
   
   
   $statement = $dbConn->prepare($sql); 
@@ -159,7 +159,7 @@ function editMeme($id, $line1, $line2, $memeType) {
   
   //Step 2: Update the meme record in the all_memes table
 
-  $sql = "UPDATE `all_memes` 
+  $sql = "UPDATE `all_memes_part2` 
             SET 
               line1 = :line1, 
               line2 = :line2, 
@@ -182,8 +182,8 @@ function deleteMemeFromDB($memeID) {
   global $dbConn; 
   
   $sql = "DELETE  
-    FROM all_memes  
-    WHERE all_memes.id = $memeID"; 
+    FROM all_memes_part2  
+    WHERE all_memes_part2.id = $memeID"; 
   
   
   $statement = $dbConn->prepare($sql); 

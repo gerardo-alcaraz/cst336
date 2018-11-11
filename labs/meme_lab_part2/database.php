@@ -10,11 +10,11 @@ function getDatabaseConnection() {
         $password = "BabaBooey1"; // best practice: define this in a separte file
         $dbname = "memes_v2"; 
     } else {
-        // running on Heroku
-        $host = "";
-        $username = "";
-        $password = ""; 
-        $dbname = ""; 
+        //running on heroku
+        $host = "us-cdbr-iron-east-01.cleardb.net";
+        $username = "b3a1549eb85a39";
+        $password = "60394a49";// best practice: define this in a seperate file
+        $dbname = "heroku_93246d737e1680c";
     }
     
     

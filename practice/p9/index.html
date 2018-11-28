@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Holiday Shopping</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <h1>Holiday Shopping</h1>
+        <h2>Cart</h2>
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>Unit Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+            </tr>
+            
+            <tr>
+                <th>Fruit Cake</th>
+                <th>$30</th>
+                <th>
+                    <form method="get">
+                        <input type="text" id="fruitCakeQuantity">
+                    </form>
+                </th>
+                <th>
+                    <p id="fruitCakeTotal">$30</p>
+                </th>s
+            </tr>
+            
+            <tr>
+                <th>Pinata (Medium Size)</th>
+                <th>$20</th>
+                <th>
+                    <form method="get">
+                        <input type="text" id="pinataQuantity">
+                    </form>
+                </th>
+                <th>
+                    <p id="pinataTotal">$40</p>
+                </th>
+            </tr>
+            
+            <tr>
+                <th>Shipping</th>
+                <th></th>
+                <th></th>
+                <th>
+                    <p id="shipTotal">$0</p>
+                </th>
+            </tr>
+            
+            <tr>
+                <th>Subtotal</th>
+                <th></th>
+                <th></th>
+                <th>
+                    <p id="subTotal">$0</p>
+                </th>
+            </tr>
+            
+            <tr>
+                <th>Tax (10%)</th>
+                <th></th>
+                <th></th>
+                <th>
+                    <p id="taxTotal">$0</p>
+                </th>
+            </tr>
+            
+            <tr>
+                <th>Total</th>
+                <th></th>
+                <th></th>
+                <th>
+                    <p id="totalPrice">$0</p>
+                </th>
+            </tr>
+            
+        </table>
+        
+        <h2>Shipping & Handling</h2>
+        
+        <form method="get">
+            <input type="radio" id="nextDay" val=15>Next-day Delivery: $15.00<br>
+            <input type="radio" checked id="threeDay" val=10>Three-day Delivery: $10.00<br>
+            <input type="radio" id="fiveDay" val=5>Regular Shipping (5-8 days): $5.00<br>
+        </form>
+        
+        <script type="text/javascript">
+        // function fruitQuantity(){
+        //     //document.getElementById("#fruitCakeTotal").innerHTML = "test";//document.getElementById(fruitCakeQuantity) * 30;
+        //     var x = document.getElementById("fruitCakeQuantity").value;
+        //     document.getElementById("fruitCakeTotal").innerHTML = "$" + x * 30 + "";
+        // }
+        $("#fruitCakeQuantity").change(function(){
+            var x = $("#fruitCakeQuantity").val();
+            $("#fruitCakeTotal").html("$" + (x * 30));
+        });
+        
+        $("#pinataQuantity").change(function(){
+           var x = $("#pinataQuantity").val();
+           $("#pinataTotal").html("$" + (x * 20));
+        });
+        
+        
+        </script>
+    </body>
+</html>

@@ -3,36 +3,66 @@
     <head>
         <title>Lab Neine</title>
         <script
-          src="https://code.jquery.com/jquery-3.3.1.min.js"
+          src="http://code.jquery.com/jquery-3.3.1.min.js"
           integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
           crossorigin="anonymous"></script>
+          <!--<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
+
     </head>
     <body>
         <form>
           State: <input type="text" id="state" onchange="getCountyList_jQuery()">
-          <br />  
+          <br><br>
           County: <select id="county"></select>
+          <br><br>
+          Zip Code: <input type="text" id="zipcode" onchange="getCityInfo()">
+          <br><br>
+          <div id="results">
+              
+          </div>
         </form>
         <script type="text/javascript">
             
             function getCountyList_jQuery() {        
               $.ajax({
                   type: "GET",
-                  url: "https://www.showdeolabs.com/cors?url=http://hosting.csumb.edu/laramiguel/ajax/countyList.php",
+                  url: "http://itcdland.csumb.edu/~milara/ajax/countyList.php",
                   dataType: "json",
-                  data: { "state": $("#state").val() },
+                  data: { "state":$("#state").val() },
                   success: function(data,status) {
                      $("#county").html("<option> Select One </option>");
-                     console.log(data);
-                    //  for (var i=0; i< data['counties'].length; i++){
-                    //      $("#county").append("<option>" + data["counties"][i].county + "</option>" );
-                    // }
+                     //console.log(data[0]);
+                     for (var i=0; i< data.length; i++){
+                         $("#county").append("<option>" + data[i].county + "</option>" );
+                    }
                   },
                   complete: function(data,status) { //optional, used for debugging purposes
                       //alert(status);
                   }
                });
             }
+            
+            function getCityInfo(){
+                $.ajax({
+                    type: "get",
+                    
+                    url: "https://www.showdeolabs.com/cors?url=http://itcdland.csumb.edu/~milara/ajax/cityInfoByZip.php",
+                    
+                    dataType: "json",
+                    
+                    data: {
+                        "format" : "json",
+                        
+                        "areaCode" :$("#areaCode").val()
+                    },
+                    success: function(data, status){
+                        data = JSON.parse(data);
+                        console.log(data);
+                        //$("#results").append("<option>" + data.areaCode + "</option>")
+                    }
+                });
+            }
+            
         </script>
     </body>
 </html>

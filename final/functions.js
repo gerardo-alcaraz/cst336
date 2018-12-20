@@ -6,6 +6,17 @@ $(function() {
         //console.log(e);
         $("#modalBox").css("display", "block");
     })
+    $("button.show").on("click", function(e) {
+        alert("show racers");
+    })
+    $("button.edit").on("click", function(e) {
+        alert("edit races");
+    })
+    $("button.cancel").on("click", function(e) {
+        alert("cancel races");
+    })
+    
+    
 
     $("button.save").on("click", function(e) {
         
@@ -14,8 +25,7 @@ $(function() {
             "raceDate": $("#raceDate").val(),
             "raceTime":$("#raceTime").val(),
             "raceLocation":$("#raceLocation").val(),
-        }
-        
+        };
         
 
         $.ajax({
@@ -24,7 +34,7 @@ $(function() {
             dataType: "json",
             contentType: "application/json",
             data: JSON.stringify(data),
-            success: function(data) {
+            success: function() {
                 console.log("Got data", data);
                 alert("posted");
             },

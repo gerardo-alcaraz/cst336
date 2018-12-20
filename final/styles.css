@@ -1,7 +1,19 @@
 button.action img {
     width: 20px;
 }
+button.show img{
+    width:20px;
+}
+button.cancel img{
+    width:20px;
+}
+button.edit img{
+    width:20px;
+}
 
+thead{
+    border-bottom: 10px;
+}
 /* The Modal (background) */
 
 .modal {

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dashboard</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body>
+        <!--Search bar-->
+        <div>
+        </div>
+        
+        <!--Dashboard-->
+        <div id="dashboard">
+            <table>
+                <table>
+                <thead>
+                    <th>ID</th>
+                    <th>Date</th>
+                    <th>Start Time</th>
+                    <th>Location</th>
+                    <th>
+                        <p><a href="#">Past Races</a></p>
+                    </th>
+                    <th>
+                        <button class="add action">
+                            <img src="img/racing-add.png" />
+                        </button>
+                    </th>
+                </thead>
+                <tbody>
+                    <!--Put all the pages data here-->
+                    <!--<td>ID GOES HERE APPEND WITH AJAX</td>-->
+                    <!--<td>DATE GOES HERE APPEND WITH AJAX</td>-->
+                    <!--<td>START TIME GOES HERE APPEND WITH AJAX</td>-->
+                    <!--<td>LOCATION GOES HERE APPEND WITH AJAX</td>-->
+                </tbody>
+            </table>
+            </table>
+        </div>
+        
+        <div id="modalBox" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h1>Add Race</h1>
+            
+            <label for="raceId">Race ID</label>
+            <input id="raceId" type="text"/>
+            
+            <br>
+            
+            <label for="raceDate">Race Date</label>
+            <input id="raceDate" type="date"/>
+            
+            <br>
+            
+            <label for="raceTime">Start Time</label>
+            <input id="raceTime" type="number" min="1" max="24"/> 24 Hour
+            
+            <br>
+            
+            <label for="raceLocation">Race Location</label>
+            <input id="raceLocation" type="text" />
+            <div>
+                <button class="save">Save</button>
+            </div>
+
+        </div>
+
+    </div>
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="functions.js"></script>
+        
+        
+    </body>
+</html>
